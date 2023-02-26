@@ -1,0 +1,123 @@
+@import '../../scss/variables';
+
+$border: 2px;
+$thinText: 300;
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    background: $gradientVlue;
+    border: $border;
+    border-radius: $bRadius;
+}
+
+.mainSearch {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchSvg {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+
+    & svg {
+        transition: all 0.3s;
+    }
+
+    &:hover svg {
+        filter: drop-shadow(0 0 1px #ADADAD);
+    }
+}
+
+.throughADay {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+}
+
+.shortInfo {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.mainInfo {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+
+.todayWeather,
+.todayHumidity {
+    z-index: 2;
+}
+
+.infoCircle {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 7rem;
+    height: 7rem;
+    margin: 1rem 0 0.9rem 0;
+    background: #183F4F;
+    background-clip: padding-box;
+    border: solid $border transparent;
+    border-radius: 50%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit;
+        background:
+            linear-gradient(135deg, #c5d1ff 8%, #325260 20%, #04212C 54%, #99CAD8 105%),
+            linear-gradient(312deg, #456676 54%, #2E4651 49%, #689DB4 60%, #2C486F 75%);
+    }
+}
+
+.moreInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+        font-weight: $thinText;
+        text-shadow: 0 0 2px $black;
+    }
+}
+
+.todayTemperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1 {
+        position: relative;
+        margin-top: -8rem;
+        font-size: 6rem;
+
+        & sup {
+            position: absolute;
+            font-size: 3rem;
+        }
+    }
+}
+
+.currentCity {
+
+    & span {
+        margin-left: 0.5rem;
+    }
+}
