@@ -1,6 +1,6 @@
 import Main from './components/Main/Main';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <Main />
