@@ -1,0 +1,106 @@
+@import '../../scss/variables';
+
+$border: 2px;
+$thinText: 300;
+$lightRed: #DE6767;
+$bg: #0F3344;
+$borderColor: linear-gradient(135deg, #c5d1ff 8%, #325260 20%, #04212C 54%, #99CAD8 105%), linear-gradient(312deg, #456676 54%, #2E4651 49%, #689DB4 60%, #2C486F 75%);
+
+.centerColumn {
+    position: relative;
+    flex: 0 0 60%;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: $bRadius;
+    background: $bg;
+    text-align: center;
+    background-clip: padding-box;
+    border: $border solid transparent;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: -$border;
+        background: $borderColor;
+        border-radius: inherit;
+        z-index: -1;
+    }
+}
+
+.airQuality {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.airQualityIcon {
+    width: 2rem;
+    margin-right: 1rem;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.airQualityGrade {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: left;
+
+    & h2 {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+}
+
+.topRow,
+.bottomRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.topRow {
+    margin-bottom: 1rem;
+}
+
+.temperature,
+.chanceOfRain,
+.uv,
+.co {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.temperatureGrade,
+.rainChance,
+.uvGrade,
+.coGrade {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+
+    & span {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    & p {
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+}

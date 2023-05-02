@@ -1,0 +1,22 @@
+@import '../../scss/variables';
+
+$border: 2px;
+$thinText: 300;
+$lightRed: #DE6767;
+$bg: #0F3344;
+$borderColor: linear-gradient(135deg, #c5d1ff 8%, #325260 20%, #04212C 54%, #99CAD8 105%), linear-gradient(312deg, #456676 54%, #2E4651 49%, #689DB4 60%, #2C486F 75%);
+
+.adInfo {
+    margin: 2rem -1.5rem 0 -1.5rem;
+    padding: 1.5rem;
+    border-radius: $bRadius $bRadius 0 0;
+}
+
+.currentDetailed {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    z-index: 1;
+}

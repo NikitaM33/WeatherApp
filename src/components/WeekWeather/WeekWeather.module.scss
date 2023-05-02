@@ -1,0 +1,78 @@
+@import '../../scss/variables';
+
+$border: 2px;
+$thinText: 300;
+$lightRed: #DE6767;
+$bg: #0F3344;
+$borderColor: linear-gradient(135deg, #c5d1ff 8%, #325260 20%, #04212C 54%, #99CAD8 105%), linear-gradient(312deg, #456676 54%, #2E4651 49%, #689DB4 60%, #2C486F 75%);
+
+.weekWeather {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.weekShortInfo {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4.25rem;
+    padding: 0.5rem 1rem;
+    background: $bg;
+    background-clip: padding-box;
+    border-radius: $bigBRadius;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: -$border;
+        border-radius: inherit;
+        background:
+            linear-gradient(135deg, #c5d1ff 8%, #325260 20%, #04212C 54%, #99CAD8 105%),
+            linear-gradient(312deg, #456676 54%, #2E4651 49%, #689DB4 60%, #2C486F 75%);
+        z-index: -1;
+    }
+}
+
+.weekDay {
+    margin-bottom: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.weekDate {
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+}
+
+.weatherIcon {
+    margin-bottom: 0.3rem;
+}
+
+.dayTemperature {
+    position: relative;
+    margin: 0 0 0.6rem -25%;
+    font-size: 1.3rem;
+
+    & sup {
+        position: absolute;
+        font-size: 1rem;
+    }
+}
+
+.dayPresure {
+    margin-bottom: 0.5rem;
+    padding: 0.1rem 0.8rem;
+    text-align: center;
+    background: $lightRed;
+    border-radius: $bRadius;
+}

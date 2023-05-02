@@ -1,0 +1,39 @@
+@import '../../scss/variables';
+
+.mainSearch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.currentCity {
+    & span {
+        margin-left: 0.5rem;
+    }
+}
+
+.searchSvg {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+
+    & svg {
+        width: 2rem;
+        transition: all 0.3s;
+    }
+
+    &:hover svg {
+        filter: drop-shadow(0 0 1px $white);
+    }
+}
+
+.serchCity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBtn {
+    width: 1.5rem;
+}

@@ -1,0 +1,62 @@
+@import '../../scss/variables';
+
+$border: 2px;
+$bg: #0F3344;
+$borderColor: linear-gradient(135deg, #c5d1ff 8%, #325260 20%, #04212C 54%, #99CAD8 105%), linear-gradient(312deg, #456676 54%, #2E4651 49%, #689DB4 60%, #2C486F 75%);
+
+.rightColumn {
+    position: relative;
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6.1rem;
+    height: 16rem;
+    padding: 0.8rem;
+    border-radius: $bRadius;
+    background: $bg;
+    text-align: center;
+    background-clip: padding-box;
+    border: $border solid transparent;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: -$border;
+        background: $borderColor;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    & hr {
+        width: 100%;
+    }
+}
+
+.wind,
+.presure,
+.humidity {
+    font-weight: 300;
+
+    & span {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}
+
+.wind {
+    padding-bottom: 1rem;
+}
+
+.presure {
+    padding: 1rem 0;
+}
+
+.humidity {
+    padding-top: 1rem;
+}
